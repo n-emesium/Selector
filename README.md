@@ -1,0 +1,1 @@
+This is a selector that shuffles, partitions, and can arbitrarily pick from groups. It is performant meaning it will scale well with input size, you can pipe to it, feed it directly; or just call it with custom names.
