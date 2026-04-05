@@ -1,0 +1,19 @@
+#!/bin/bash
+g++ pair.cpp randomizer.c init.cpp -o pair
+./pair
+./pair osman hasan ali
+./pair osman hasan ali adam
+./pair names.txt
+./pair names2.txt
+./pair < names.txt
+./pair < names2.txt
+
+g++ grouper.cpp randomizer.c init.cpp set.c -o grouper
+./grouper
+./grouper 3 5 osman hasan ali
+./grouper 4 10 osman hasan ali adam
+./grouper 20 30 names.txt
+./grouper 30 60 names2.txt
+./grouper 5 2 < names.txt
+./grouper 1 6 < names2.txt
+

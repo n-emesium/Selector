@@ -1,0 +1,13 @@
+#!/bin/bash
+cc -Wall -pedantic -Wunused-variable -g randomizer.c set.c picker.c -o picker
+valgrind ./picker 3 5 
+sleep 1
+valgrind ./picker 4 10 
+sleep 1
+valgrind ./picker 20 30 
+sleep 1
+valgrind ./picker 30 60 
+sleep 1
+valgrind ./picker 5 2
+sleep 1
+valgrind ./picker 1 6
