@@ -1,19 +1,11 @@
 #!/bin/bash
-g++ pair.cpp randomizer.c init.cpp -o pair
-./pair
+g++ -O3 pair.cpp randomizer.c init.cpp -o pair
+echo "--- pair ---"
 ./pair osman hasan ali
-./pair osman hasan ali adam
-./pair names.txt
-./pair names2.txt
 ./pair < names.txt
-./pair < names2.txt
 
-g++ grouper.cpp randomizer.c init.cpp set.c -o grouper
-./grouper
-./grouper 3 5 osman hasan ali
-./grouper 4 10 osman hasan ali adam
-./grouper 20 30 names.txt
-./grouper 30 60 names2.txt
-./grouper 5 2 < names.txt
-./grouper 1 6 < names2.txt
-
+g++ -O3 grouper.cpp randomizer.c init.cpp set.c -o grouper
+echo "--- grouper ---"
+./grouper 2 osman hasan ali        # group by 2
+./grouper 3 names.txt              # group file by 3
+cat names2.txt | ./grouper 5       # pipe group by 5

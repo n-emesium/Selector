@@ -25,12 +25,9 @@ uint matoi(char *s) {
     return c;
 }
 
-vector<string> init(int argc, char **argv, int* sz, int* k) {
-    if (argc < 3) exit(-1);
-    int s1 = matoi(argv[1]), s2 = matoi(argv[2]);
-    int l = max(s1, s2);
-    *sz = l;
-    vector<string> ans = init(argc - 2, argv + 2);
-    *k = min(ans.size(), s1 + s2 - l); 
+vector<string> init(int argc, char **argv, int* k) {
+    if (argc < 2) exit(-1);
+    vector<string> ans = init(argc - 1, argv + 1);
+    *k = min(ans.size(), matoi(argv[1])); 
     return ans;
 }

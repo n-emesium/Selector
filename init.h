@@ -7,7 +7,7 @@
 #define min(a, b) ((a) < (b) ? (a) : (b))
 using namespace std;
 vector<string> init(int, char**);
-vector<string> init(int, char **, int *, int *);
+vector<string> init(int, char **, int *);
 uint matoi(char *);
 
 #endif

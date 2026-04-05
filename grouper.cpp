@@ -17,9 +17,9 @@ void assign_names(set *s, vector<string> names) {
 using namespace std;
 int main(int argc, char *argv[]) {
     seed();
-    int k, sz;
-    vector<string> names = init(argc, argv, &k, &sz);
-    set *s = store_pick(sz, k);
+    int k;
+    vector<string> names = init(argc, argv, &k);
+    set *s = store_pick(names.size(), k);
     assign_names(s, names);
     free_set(s);
 }
