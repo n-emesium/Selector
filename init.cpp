@@ -31,6 +31,6 @@ vector<string> init(int argc, char **argv, int* sz, int* k) {
     int l = max(s1, s2);
     *sz = l;
     vector<string> ans = init(argc - 2, argv + 2);
-    *k = ans.size();
+    *k = min(ans.size(), s1 + s2 - l); 
     return ans;
 }
