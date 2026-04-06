@@ -12,7 +12,7 @@ static inline uint matoi(char *s) {
 }
 int main(int argc, char *argv[]) {
     if (argc < 3) {printf("You gave %d many args, 3 are needed.\n", argc - 1); return 1;}
-    seed();
+    xor_seed();
     int sz = matoi(argv[1]), k = matoi(argv[2]);
     int l = max(sz, k), s = sz + k - l;
     pick(l, s);

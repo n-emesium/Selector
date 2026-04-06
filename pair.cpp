@@ -1,8 +1,6 @@
 #include <unistd.h>
 #include <iostream>
-#include <fstream>
 #include <vector>
-#include <string>
 #include "randomizer.h"
 #include "init.h"
 using namespace std;
@@ -39,7 +37,7 @@ vector<pair<string, string>> paired(vector<string> v) {
     return ans;
 }
 int main(int argc, char **argv) {
-    seed();
+    xor_seed();
     vector<string> names = init(argc, argv);
     cout << paired(names) << "\n";
 }
